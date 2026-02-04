@@ -1,51 +1,45 @@
-﻿@model IEnumerable<ThreeDPrinters>
-
-@{
-    ViewData["Title"] = "Printer List";
+﻿@{
+    ViewData["Title"] = "3D Printers";
 }
 
-<h1>PrinterList</h1>
+<div class="container py-4">
+    <h1 class="mb-4 text-center">3D Printer List</h1>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.SKU)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BuildVolume)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PrinterImage)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.SKU)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BuildVolume)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PrinterImage)
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+            <div class="card h-100 shadow">
+                <img src="https://via.placeholder.com/300x200"
+                     class="card-img-top img-fluid"
+                     alt="Printer">
+                <div class="card-body">
+                    <h5 class="card-title">Prusa MK3</h5>
+                    <p class="card-text">Reliable and accurate 3D printer.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 shadow">
+                <img src="https://via.placeholder.com/300x200"
+                     class="card-img-top img-fluid"
+                     alt="Printer">
+                <div class="card-body">
+                    <h5 class="card-title">Creality Ender 3</h5>
+                    <p class="card-text">Affordable printer for beginners.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 shadow">
+                <img src="https://via.placeholder.com/300x200"
+                     class="card-img-top img-fluid"
+                     alt="Printer">
+                <div class="card-body">
+                    <h5 class="card-title">Bambu Lab X1</h5>
+                    <p class="card-text">High-speed professional printer.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
